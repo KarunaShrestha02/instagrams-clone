@@ -3,6 +3,7 @@ import { AiFillHeart } from "react-icons/ai";
 import { FaComment } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import Comment from "../Comment/Comment";
+import PostFooter from "../FeedPosts/PostFooter";
 
 
 const ProfilePost = ({img}) => {
@@ -110,8 +111,76 @@ size={{base:"3xl" ,md:"5xl"}}
             profilePic={"https://bit.ly/kent-c-dodds"}
             text={"Good clone dude"}
             />
+
+
+
+
+<Comment
+            createdAt="3h ago"
+            username="ishim_pandey"
+            profilePic={"https://bit.ly/kent-c-dodds"}
+            text={"Good clone dude"}
+            />
+             <Comment
+            createdAt="3h ago"
+            username="ishim_pandey"
+            profilePic={"https://bit.ly/kent-c-dodds"}
+            text={"Good clone dude"}
+            />
+             <Comment
+            createdAt="3h ago"
+            username="ishim_pandey"
+            profilePic={"https://bit.ly/kent-c-dodds"}
+            text={"Good clone dude"}
+            />
+             <Comment
+            createdAt="3h ago"
+            username="ishim_pandey"
+            profilePic={"https://bit.ly/kent-c-dodds"}
+            text={"Good clone dude"}
+            />
+             <Comment
+            createdAt="3h ago"
+            username="ishim_pandey"
+            profilePic={"https://bit.ly/kent-c-dodds"}
+            text={"Good clone dude"}
+            />
+             <Comment
+            createdAt="3h ago"
+            username="ishim_pandey"
+            profilePic={"https://bit.ly/kent-c-dodds"}
+            text={"Good clone dude"}
+            />
+             <Comment
+            createdAt="3h ago"
+            username="ishim_pandey"
+            profilePic={"https://bit.ly/kent-c-dodds"}
+            text={"Good clone dude"}
+            />
+             <Comment
+            createdAt="3h ago"
+            username="ishim_pandey"
+            profilePic={"https://bit.ly/kent-c-dodds"}
+            text={"Good clone dude"}
+            />
+             <Comment
+            createdAt="3h ago"
+            username="ishim_pandey"
+            profilePic={"https://bit.ly/kent-c-dodds"}
+            text={"Good clone dude"}
+            />
+
+
+
+
+
+
+
+
+
             </VStack>
-          
+            <Divider my={4} bg={"gray.800"}/>
+            <PostFooter isprofilePage={true}/>
           </Flex>
             </Flex>
           </ModalBody>
