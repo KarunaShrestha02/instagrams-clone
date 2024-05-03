@@ -33,7 +33,6 @@ const ProfilePosts = () => {
         <ProfilePost img="/img2.png"/>
         <ProfilePost img="/img3.png"/>
         <ProfilePost img="/img4.png"/>
-
           </>
       )}
 
