@@ -8,15 +8,15 @@ const useSignUpWithEmailAndPassword = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword  (auth);
+      ] = useCreateUserWithEmailAndPassword(auth);
 const signup= async (inputs) => {
-  if(!inputs.email || inputs.password || inputs.username || inputs.fullName)
+  if(!inputs.email || inputs.username || inputs.fullName || inputs.password )
     {
       console.log("Please fill all the fields")
-      return
-    }
+      return;
+    } 
     try{
-      const newUser = await createUserWithEmailAndPassword(inputs.email,inputs.password)
+      const newUser = await createUserWithEmailAndPassword(inputs.email,inputs.password);
       if(!newUser && error)
         {
           console.log(error)
@@ -34,8 +34,8 @@ const signup= async (inputs) => {
               followers:[],
               following:[],
               posts:[],
-              createdAt:Date.now(),
-            };
+              createdAt:Date.now()
+            }
             await setDoc(doc(firestore, "users",newUser.user.uid), userDoc);
             localStorage.setItem("user-info", JSON.stringify(userDoc));
           }
