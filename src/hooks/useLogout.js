@@ -1,6 +1,7 @@
 
 import { useSignOut } from 'react-firebase-hooks/auth';
 import useShowToast from './useShowToast';
+import { auth } from '../firebase/firebase';
 
 const useLogout = () => {
     const [signOut, isLoggingOut, error] = useSignOut(auth);

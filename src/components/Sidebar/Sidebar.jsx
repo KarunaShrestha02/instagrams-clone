@@ -31,7 +31,7 @@ const Sidebar = () => {
         link :"/asaprogrammer",
     },
 ];
-  const{handleLogout,isLoggingOut}=useLogout()
+  const { handleLogout, isLoggingOut}=useLogout()
   return ( <Box
   height={"100vh"}
   borderRight={"1px solid"}
