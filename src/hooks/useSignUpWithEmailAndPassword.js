@@ -5,24 +5,19 @@ import useShowToast from "./useShowToast";
 
 
 const useSignUpWithEmailAndPassword = () => {
-    const [
-        createUserWithEmailAndPassword,
-       
-        loading, 
-        error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+    const [createUserWithEmailAndPassword, loading,  error] = useCreateUserWithEmailAndPassword(auth);
       const showToast =useShowToast();
 const signup= async (inputs) => {
   if(!inputs.email || !inputs.username || !inputs.fullName || !inputs.password )
     {
-      showToast("r","Please fill all the fields","error");
+      showToast("Error","Please fill all the fields","error");
       return;
     } 
     try{
       const newUser = await createUserWithEmailAndPassword(inputs.email,inputs.password);
       if(!newUser && error)
         {
-          showToast("Error",error,"error");
+          showToast("Error",error.message,"error");
           return; 
         }
         if(newUser)
