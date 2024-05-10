@@ -53,6 +53,7 @@ export default Login;
  import { Alert, AlertIcon, Button, Input } from "@chakra-ui/react";
 import { useState } from "react";
 import useLogin from "../../hooks/useLogin";
+import { auth } from "../../firebase/firebase";
 
 const Login = () => {
 	const [inputs, setInputs] = useState({
@@ -97,8 +98,7 @@ const Login = () => {
 				size={"sm"}
 				fontSize={14}
 				isLoading={loading}
-				onClick={() => login(inputs)}
-			>
+				onClick={() => login(inputs)}>
 				Log in
 			</Button>
 		</>
