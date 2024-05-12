@@ -25,7 +25,7 @@ const GoogleAuth = ({prefix}) => {
             //login
             {
                 const userDoc =userSnap.data();
-                localStorage.setItem("user-info",JSON.stringify(userDoc));\
+                localStorage.setItem("user-info",JSON.stringify(userDoc));
                 loginUser(userDoc);
             }
           else
@@ -42,7 +42,7 @@ const GoogleAuth = ({prefix}) => {
               following:[],
               posts:[],
               createdAt:Date.now()
-            };
+            }
             await setDoc(doc(firestore, "users",newUser.user.uid), userDoc);
             localStorage.setItem("user-info", JSON.stringify(userDoc));
             loginUser(userDoc);
