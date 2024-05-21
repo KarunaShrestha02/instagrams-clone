@@ -1,6 +1,8 @@
 import React from 'react'
 import Home from './Home'
 import Notifications from './Notifications'
+import CreatePost from './CreatePost'
+import ProfileLink from './ProfileLink'
 
 const SidebarItems = () => {
   return (
@@ -8,6 +10,8 @@ const SidebarItems = () => {
     <Home />
     {/*Search */}
     <Notifications />
+    <CreatePost />
+    <ProfileLink/>
     </>
   )
 }
