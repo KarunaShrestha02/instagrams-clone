@@ -2,8 +2,12 @@
 import React from 'react'
 import SuggestedHeader from './SuggestedHeader';
 import SuggestedUser from './SuggestedUser';
+import useGetSuggestedUsers from '../../hooks/usegetSuggestedUsers';
  
  const SuggestedUsers = () => {
+    const {isLoading,suggestedUsers} =useGetSuggestedUsers();
+
+    if(isLoading) return null;
    return ( <VStack py={8} px={6} gap={4}>
     <SuggestedHeader/>
     <Flex alignItems={"center"} justifyContent={"space-between"} w={"full"}>
