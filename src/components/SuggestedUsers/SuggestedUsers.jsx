@@ -18,9 +18,10 @@ import useGetSuggestedUsers from '../../hooks/usegetSuggestedUsers';
             See All
         </Text>
     </Flex>
-    <SuggestedUser  name="Luke Davis" followers={2100} avatar='https://bit.ly/dan-baramov'/>
-    <SuggestedUser name="Andy Gray" followers={540} avatar='https://bit.ly/ryan-florence' />
-    <SuggestedUser name="Psikh Bogandov" followers={4000} avatar='https://bit.ly/code-beast'/>
+    
+    {suggestedUsers.map((user) =>(
+        <SuggestedUser user={user} key={user.id} />
+    ))}
 
     <Box fontSize={12} color={"gray.500"} mt={5} >
     @ 2024 Built By{" "}
