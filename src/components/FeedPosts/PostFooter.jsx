@@ -5,6 +5,12 @@ import { CommentLogo, NotificationsLogo, UnlikeLogo } from '../../assets/constan
 const PostFooter = ({username,isprofilePage}) => {
     const [liked, setLiked]= useState(false);
     const[likes, setLikes]= useState(1000);
+    const {isCommenting,handlePostComment}=usePostComment();
+    const [comment,setComment]=useState('')
+    const handleSubmitComment =async ()=>{
+        await handlePostComment(post.id,comment)
+        
+    }
     const handleLike =()=> {
         if(liked)
         {
@@ -49,7 +55,10 @@ const PostFooter = ({username,isprofilePage}) => {
     w={"full"}
     >
         <InputGroup>
-        <Input variant={"flushed"} placeholder={"Add a comment..."} fontSize={14}/>
+        <Input variant={"flushed"} placeholder={"Add a comment..."} fontSize={14}
+        onChange={(e)=>setComment(e.target.value)}
+        value={comment}
+        />
         <InputRightElement>
         <Button
         fontSize={14}
@@ -58,6 +67,7 @@ const PostFooter = ({username,isprofilePage}) => {
         cursor={"pointer"}
         _hover={{color:"white"}}
         bg={"transparent"}
+        onClick={handleSubmitComment}
         >
             Post
         </Button>
