@@ -3,15 +3,15 @@ import PostHeader from "./PostHeader";
 import PostFooter from "./PostFooter";
 
 
-const FeedPost = ({img,username,avatar}) => {
+const FeedPost = ({post}) => {
   return (
     <>
-    <PostHeader username={username} avatar={avatar}  />
+   { /*<PostHeader post={post}  />*/}
     <Box my={2} borderRadius={4}
     overflow={"hidden"}> 
-        <Image src={img} alt={username} />
+        <Image src={post.imgURL} alt={"FEED POST IMG"} />
         </Box>
-         <PostFooter />
+         {/*<PostFooter username={username} />*/}
     </>
   ) ;
 };
