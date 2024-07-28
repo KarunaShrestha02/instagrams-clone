@@ -2,10 +2,12 @@
 import React from 'react'
 import SuggestedHeader from './SuggestedHeader';
 import SuggestedUser from './SuggestedUser';
-import useGetSuggestedUsers from '../../hooks/usegetSuggestedUsers';
+import usegetSuggestedUsers from '../../hooks/usegetSuggestedUsers';
+//import useGetSuggestedUsers from "../../hooks/useGetSuggestedUsers";
+
  
  const SuggestedUsers = () => {
-    const {isLoading,suggestedUsers} =useGetSuggestedUsers();
+    const {isLoading,suggestedUsers} =usegetSuggestedUsers();
 
     if(isLoading) return null;
    return ( <VStack py={8} px={6} gap={4}>
